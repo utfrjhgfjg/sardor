@@ -1,0 +1,109 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    .card {
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+    }
+    .menu-btn a {
+      text-decoration: none;
+      color: inherit;
+    }
+    .row {
+      padding: 40px 20px;
+    }
+  </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold text-warning" href="#">Mega Shop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Fast Food</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mil.html">Juice</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="geny.html">Fruits</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="jilo.html" tabindex="-1" aria-disabled="true">Cakes</a>
+        </li>
+      </ul>
+      <form class="d-flex menu-btn">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">
+          <a href="merlin.html">Menyu</a>
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container mt-4">
+  <div class="text-center mb-4">
+    <h1 class="text-success">Fast Food</h1>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
+  
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://cdn.leonardo.ai/users/47a5df0f-6a9c-4d27-b68b-401f47151088/generations/5587e858-d384-44e4-b000-b9691e78ce37/Leonardo_Phoenix_09_A_topdown_view_of_a_freshly_baked_Italians_2.jpg" class="card-img-top" alt="Ajoyib pitsa rasmi">
+        <div class="card-body">
+          <h5 class="card-title">Ajoyib Pitsa</h5>
+          <p class="card-text">Bu ajoyib pittsa faqat Mega Food saytida. Yetkazib berishda 50% chegirma! Narxi: <strong>48,000 so'm</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://cdn.leonardo.ai/users/47a5df0f-6a9c-4d27-b68b-401f47151088/generations/2f6d7db3-04c6-4f59-81d0-e85afaf19230/Leonardo_Phoenix_09_A_closeup_highresolution_image_of_a_freshl_3.jpg" class="card-img-top" alt="Hot-dog rasmi">
+        <div class="card-body">
+          <h5 class="card-title">Hot-Dog</h5>
+          <p class="card-text">Super Hot Dog — cheklangan miqdorda: kuniga 100 dona. Narxi: <strong>11,000 so'm</strong>.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col">
+      <div class="card h-100">
+        <img src="https://cdn.leonardo.ai/users/47a5df0f-6a9c-4d27-b68b-401f47151088/generations/0df006fb-3a95-4735-bb81-d8a35e5bf0f7/Leonardo_Phoenix_09_A_photorealistic_hamburger_with_a_juicy_gr_2.jpg" class="card-img-top" alt="Gamburger rasmi">
+        <div class="card-body">
+          <h5 class="card-title">Gamburger</h5>
+          <p class="card-text">Mazali gamburger — pishloq, salat va go‘sht bilan. Narxi: <strong>25,000 so'm</strong>. Faqat bizda!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"></script>
+</body>
+</html>
