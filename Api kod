@@ -1,0 +1,95 @@
+ fetch(``);
+ https://itunes.apple.com/search?term=${encodeURIComponent(query)}&limit=1
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      text-align: center;
+      padding: 30px;
+      background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRoGvGJij-NEiSiIa-LsV3kEjLzA4bKvx3FQ&s);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    input {
+      width: 70%;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .info {
+      margin-top: 20px;
+    }
+
+    img {
+      width: 100px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Davlat Ma'lumotlari Qidiruv</h1>
+    <input type="text" id="searchInput" placeholder="Davlat nomini kiriting..." />
+    <button onclick="searchCountry()">Qidirish</button>
+    <div id="result" class="info"></div>
+  </div>
+
+  <script>
+    function searchCountry() {
+      const query = document.getElementById('searchInput').value.trim();
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = "⏳ Yuklanmoqda...";
+
+      if (!query) {
+        resultDiv.innerHTML = "Iltimos, davlat nomini kiriting.";
+        return;
+      }
+
+      fetch(`https://restcountries.com/v3.1/name/${encodeURIComponent(query)}`)
+        .then(response => {
+          if (!response.ok) throw new Error("Davlat topilmadi!");
+          return response.json();
+        })
+        .then(data => {
+          const country = data[0];
+          resultDiv.innerHTML = `
+            <h2>${country.name.common}</h2>
+            <p><strong>Poytaxt:</strong> ${country.capital ? country.capital[0] : "Ma'lumot yo'q"}</p>
+            <p><strong>Aholisi:</strong> ${country.population.toLocaleString()}</p>
+            <img src="${country.flags.png}" alt="Bayroq" />
+          `;
+        })
+        .catch(error => {
+          resultDiv.innerHTML = "Xatolik: " + error.message;
+        });
+    }
+  </script>
+
+</body>
+</html>
